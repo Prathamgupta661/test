@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <br>
+
+    <form action="/todo" method="post">
+        <input type="text" name="title" placeholder="Enter title"><br>
+        <br>
+        <input type="text" name="description" placeholder="Enter desc"><br>
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <br>
+    <button onclick="todolist">Show todo</button>
+    <div class="display-todo" id="todos">
+            <% todo.map(item => { %>
+              <li> <div class="item">title: <%= item.title %> 
+            <br>Desc: <%= item.description %> </div> </li>
+            <% }) %>
+          </ul>
+    </div>
+
+    
+</body>
+</html>
